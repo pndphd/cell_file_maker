@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/cell_file_maker" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
