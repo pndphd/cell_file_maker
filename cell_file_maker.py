@@ -28,7 +28,7 @@ from qgis.core import QgsProject
 from qgis.gui import *
 from qgis.analysis import *
 
-# Initialize Qt resources from file resources.py
+# Initialize Qt resources from file named resources.py
 from .resources import *
 # Import the code for the dialog
 from .cell_file_maker_dialog import inSALMOPluginDialog
