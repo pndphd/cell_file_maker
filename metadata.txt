@@ -12,8 +12,8 @@ email=pndphd@gmail.com
 
 about=This plugin uses user supplied raster files and a spatial grid to generate inSALMO cell files.
 
-tracker=github.com
-repository=github.com
+tracker=https://github.com/pndphd/cell_file_maker/issues
+repository=https://github.com/pndphd/cell_file_maker
 # End of mandatory metadata
 
 # Recommended items:
