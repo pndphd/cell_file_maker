@@ -6,7 +6,7 @@
 name=Cell File Generator 
 qgisMinimumVersion=3.0
 description=Generates the cell input files for inSALMO
-version=0.1
+version=0.3
 author=Peter N. Dudley
 email=pndphd@gmail.com
 

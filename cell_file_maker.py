@@ -204,7 +204,16 @@ class inSALMOPlugin:
             self.dlg.pushButton.clicked.connect(self.select_output_file)
             
          
-        layers = QgsProject.instance().layerTreeRoot().children()
+
+        #Load the vector layers into ther combo box
+        layerIDs = QgsProject.instance().layerTreeRoot().findLayerIds()
+        
+        # layers may be in groups so get all layer ids and load from them 
+        initLayerList = []
+        for layerID in layerIDs:
+            initLayerList.append(QgsProject.instance().mapLayer(layerID))
+        layers = initLayerList 
+        
         layer_list = []
         for layer in layers:
             layer_list.append(layer.name())
@@ -229,9 +238,9 @@ class inSALMOPlugin:
             outputFile = open(fileName, 'w')
 
             # get the layers
-            coverLayer = layers[self.dlg.coverComboBox.currentIndex()].layer()
-            gravelLayer = layers[self.dlg.gravelComboBox.currentIndex()].layer()
-            gridLayer = layers[self.dlg.gridComboBox.currentIndex()].layer()
+            coverLayer = layers[self.dlg.coverComboBox.currentIndex()]
+            gravelLayer = layers[self.dlg.gravelComboBox.currentIndex()]
+            gridLayer = layers[self.dlg.gridComboBox.currentIndex()]
 
             # QgsMessageLog.logMessage(coverLayer.source(), "New")
             # QgsMessageLog.logMessage(gravelLayer.source(), "New")
